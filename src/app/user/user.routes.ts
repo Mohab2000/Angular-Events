@@ -1,5 +1,5 @@
 import { LoginComponent } from "./login.component";
-import { ProfileComponent } from "./prrofile.component";
+import { ProfileComponent } from "./profile.component";
 
 export const userRoutes = [
   {
