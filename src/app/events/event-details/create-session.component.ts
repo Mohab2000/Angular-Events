@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ISession, restrictiedWords } from "../shared/index";
 @Component({
@@ -32,6 +32,7 @@ import { ISession, restrictiedWords } from "../shared/index";
   ],
 })
 export class CreateSessionComponent {
+  @Output() saveNewSession = new EventEmitter();
   newSessionForm: FormGroup;
   name: FormControl;
   presenter: FormControl;
@@ -68,6 +69,6 @@ export class CreateSessionComponent {
       abstract: formValues.abstract,
       voters: [],
     };
-    console.log(session);
+    this.saveNewSession.emit(session);
   }
 }
