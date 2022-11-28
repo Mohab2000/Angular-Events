@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ISession, restrictiedWords } from "../shared/index";
 @Component({
+  selector: "create-session",
   templateUrl: "./create-session.component.html",
   styles: [
     `
