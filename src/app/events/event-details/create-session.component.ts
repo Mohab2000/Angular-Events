@@ -33,6 +33,7 @@ import { ISession, restrictiedWords } from "../shared/index";
 })
 export class CreateSessionComponent {
   @Output() saveNewSession = new EventEmitter();
+  @Output() cancelAddSession = new EventEmitter();
   newSessionForm: FormGroup;
   name: FormControl;
   presenter: FormControl;
@@ -70,5 +71,8 @@ export class CreateSessionComponent {
       voters: [],
     };
     this.saveNewSession.emit(session);
+  }
+  cancel() {
+    this.cancelAddSession.emit();
   }
 }
