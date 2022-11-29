@@ -1,7 +1,7 @@
 <div class="row" *ngFor="let session of sessions">
   <div class="col-md-10">
     <collapsible-well>
-      <div class="title">
+      <div well-title>
         {{ session.name }}
         <i
           *ngIf="session.voters.length > 3"
@@ -10,7 +10,7 @@
         >
         </i>
       </div>
-      <div class="body">
+      <div well-body>
         <h6>{{ session.presenter }}</h6>
         <span>Duration: {{ session.duration }}</span
         ><br />
