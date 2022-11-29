@@ -21,6 +21,7 @@ import { appRoutes } from "./routes";
 import { Error404Component } from "./errors/404.component";
 import { AuthService } from "./user/auth.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CollapsibleWellComponent } from "./common/collapsible-well.component";
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
+    CollapsibleWellComponent,
   ],
   providers: [
     EventService,
